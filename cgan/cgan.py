@@ -113,7 +113,7 @@ os.makedirs("../../data/mnist", exist_ok=True)
 class MNIST_missing_labels(torch.utils.data.Dataset):
   def __init__(self):
     super(MNIST_missing_labels, self).__init__()
-    self.orig_mnist = datasets.MNIST("../../data/mnist",
+    self.orig_mnist = datasets.MNIST("../data/MNIST/processed",
         train=True,
         download=True,
         transform=transforms.Compose(
